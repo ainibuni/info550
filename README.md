@@ -13,13 +13,13 @@ for(p in pkgs){
 	}
 }
 ```
-***
+
 ## Execute the analysis
 
 To execute the analysis, from the project folder you can run
 
 ```
-Rscript -e "rmarkdown::render('INFO 550 HW3.Rmd', output_file = 'Report.html')"
+Rscript -e "rmarkdown::render('INFO 550 HW3.Rmd', output_file = 'report.html')"
 ```
 
-This will create a file called `Report.html` output in your directory that contains the results.
+This will create a file called `report.html` output in your directory that contains the results.
