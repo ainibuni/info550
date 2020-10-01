@@ -1,9 +1,10 @@
 ---
-title: "INFO 550 HW3"
+title: "Report"
 author: "Weijia Qian"
 date: "9/24/2020"
 output: html_document
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -11,12 +12,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-### Import data
 ```{r import data}
 dat = read.csv("./project1_data-1.csv", header = FALSE, sep = "")
 ```
 
-### Data cleaning
 ```{r data cleaning}
 colnames(dat) = c("id", "time", "status", "drug", "age", "sex", "ascites","hepatomegaly", "spiders","edema","serum_bilirubin","serum_cholesterol", "albumin", "urine_copper", "alkaline_phosphatase","SGOT","triglicerides","platelets","prothrombin","histologic_stage")
 
@@ -39,9 +38,9 @@ fit_bilirubin2 <- survfit(Surv(time, status) ~ bilirubin_cat, data = dat)
 ggsurvplot(fit_bilirubin2, data=dat, pval=TRUE)
 ```
 
-I used Kepler-Meier estimates to estimate the survival curves by drug and by serum bilirubin level, and then tested whether curves are significantly different by log rank test.
-1. Treatment: p = 0.75. There is no significant difference between the survival curves of the treatment and placebo groups.
-2. Serum bilirubin: p < 0.0001. There is significant difference between the survival curves of the three serum bilirubin groups.
+I used Kepler-Meier estimates to estimate the survival curves by drug and by serum bilirubin level, and then tested whether curves are significantly different by log rank test.  
+1. Treatment: $p = 0.75$. There is no significant difference between the survival curves of the treatment and placebo groups.  
+2. Serum bilirubin: $p < 0.0001$. There is significant difference between the survival curves of the three serum bilirubin groups.
 
 ```{r}
 getwd()
