@@ -4,11 +4,11 @@ For my survival analysis project, I will use the data from the Mayo Clinic  tria
 
 To analyze the data you will need to install some `R` packages. The required packages can be installed using `R` commands.
 
-```
+``` r
 installed_pkgs <- row.names(installed.packages())
 pkgs <- c("survival", "survminer")
 for(p in pkgs){
-	if(!(p %in% install_pkgs)){
+	if(!(p %in% installed_pkgs)){
 		install.packages(p)
 	}
 }
@@ -18,7 +18,7 @@ for(p in pkgs){
 
 To execute the analysis, from the project folder you can run
 
-```
+``` bash
 Rscript -e "rmarkdown::render('INFO 550 HW3.Rmd', output_file = 'report.html')"
 ```
 
