@@ -25,5 +25,5 @@ This will create a file called `report.html` output in your directory that conta
 To get some helpful information about the Makefile, from the project folder you can run
 
 ``` bash
-make help.html
+make help
 ```
