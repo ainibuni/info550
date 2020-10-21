@@ -1,17 +1,13 @@
 ## My Project
 
-For my survival analysis project, I will use the data from the Mayo Clinic  trial in primary biliary cirrhosis (PBC) of the liver conducted between 1974 and 1984. The dataset contains a total of 424 PBC patients.
+For my survival analysis project, I will use the data from the Mayo Clinic  trial in primary biliary cirrhosis (PBC) of the liver conducted between 1974 and 1984. The dataset contains a total of 312 PBC patients.
 
-To analyze the data you will need to install some `R` packages. The required packages can be installed using `R` commands.
+## Install R packages
 
-``` r
-installed_pkgs <- row.names(installed.packages())
-pkgs <- c("survival", "survminer")
-for(p in pkgs){
-	if(!(p %in% installed_pkgs)){
-		install.packages(p)
-	}
-}
+To install the packages needed for my analysis, from the project folder you can run
+
+``` bash
+make install
 ```
 
 ## Execute the analysis
@@ -19,7 +15,15 @@ for(p in pkgs){
 To execute the analysis, from the project folder you can run
 
 ``` bash
-Rscript -e "rmarkdown::render('INFO 550 HW3.Rmd', output_file = 'report.html')"
+make report.html
 ```
 
 This will create a file called `report.html` output in your directory that contains the results.
+
+## Makefile help
+
+To get some helpful information about the Makefile, from the project folder you can run
+
+``` bash
+make help.html
+```
