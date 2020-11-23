@@ -38,7 +38,7 @@ make install
 To execute the analysis, from the project folder you can run
 
 ``` bash
-make report.html
+make report
 ```
 
 This will create a file called `report.html` output in your directory that contains the results.
