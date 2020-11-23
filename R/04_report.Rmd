@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.width = 6, fig.height = 6)
 ## Executive summary
 
 ```{r exec-summary-stats}
-dat <- read.table("../clean_data/data.txt", header = TRUE)
+dat <- read.csv("../clean_data/data.csv", header = TRUE)
 n <- nrow(dat)
 table1 <- table(dat$drug)
 table2 <- table(dat$bilirubin_cat)
